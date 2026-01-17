@@ -1,5 +1,6 @@
 import HeroSection from "./HeroSection.tsx";
 import CollectionSpecialSection from "./CollectionSpecialSection.tsx";
+import StorySection from "./StorySection.tsx";
 
 
 export default function HomePage() {
@@ -7,6 +8,7 @@ export default function HomePage() {
     <>
       <HeroSection></HeroSection>
       <CollectionSpecialSection></CollectionSpecialSection>
+      <StorySection></StorySection>
     </>
   )
 }
