@@ -1,8 +1,7 @@
-import {FunctionComponent} from 'react';
 import { ChevronDown } from "lucide-react";
-import {MissCandleButton} from "./index.tsx";
+import {MissCandleButton} from "../../components";
 
-const MissCandleHeroSection: FunctionComponent<unknown> = () => {
+export default function HeroSection () {
   return (
     <section className="relative min-h-[90vh] md:min-h-screen flex items-center bg-stone-900 overflow-hidden">
       {/* Background Image */}
@@ -55,5 +54,3 @@ const MissCandleHeroSection: FunctionComponent<unknown> = () => {
     </section>
   );
 }
-
-export default MissCandleHeroSection;

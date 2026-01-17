@@ -5,9 +5,12 @@
        Bạn chỉ cần thêm mốc mới là 'xs'. */
     --breakpoint-xs: 480px;
     --color-brightenUp: #F59E0B;
+    --color-itemCard: #1F2A2E;
     --color-bgHeaderFooter: #F1EDE4;
     --color-bgPrimary: transparent;
+    --color-bgSectionSpecialItem: #05292C;
     --color-textHeader: #172226;
     --color-textPrimary: #000000;
+    --color-textHover: #F59E0B;
     --color-textSecondary: #9CA3AF;
 }
