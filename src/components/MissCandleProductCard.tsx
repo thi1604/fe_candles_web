@@ -18,7 +18,7 @@ type TMissCandleProductCard = {product: IProductCard};
 
 const MissCandleProductCard: FunctionComponent<TMissCandleProductCard> = ({product}) => {
   return (
-    <div className="bg-itemCard rounded-xl p-3 md:p-4 group hover:shadow-xl transition-[transform,shadow] duration-600 ease-out hover:-translate-y-1 h-full flex flex-col will-change-transform">
+    <div className="bg-white/50 rounded-xl p-3 md:p-4 group hover:shadow-xl transition-[transform,shadow] duration-600 ease-out hover:-translate-y-1 h-full flex flex-col will-change-transform">
       <div className="relative overflow-hidden rounded-lg mb-3 md:mb-4 aspect-square bg-itemCard">
         {product.badge && (
           <span className="absolute top-2 left-2 md:top-3 md:left-3 z-10 bg-textHover text-white text-[10px] md:text-xs font-bold px-2 py-1 rounded shadow-sm">

@@ -56,12 +56,8 @@ export default function CollectionSpecialSection () {
             Sản Phẩm Nổi Bật
           </p>
           <h2 className="text-2xl md:text-4xl font-serif text-dark font-bold">
-            Bộ Sưu Tập <span className="text-primary italic">Đặc Biệt</span>
+            Bộ Sưu Tập <span className="text-primary italic">Tinh Hoa</span>
           </h2>
-          <p className="text-dark mt-3 md:mt-4 max-w-xl mx-auto text-sm md:text-base opacity-80">
-            Những sản phẩm được yêu thích nhất, được làm thủ công từ nguyên liệu tự nhiên
-            với hương thơm tinh tế, bền lâu.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">

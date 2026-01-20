@@ -3,72 +3,87 @@ import {MissCandleValueProp} from "../../components";
 
 const features = [
   {
-    icon: <Leaf className="text-brightenUp"/>,
+    icon: <Leaf className="text-primary"/>,
     title: "100% Tự Nhiên",
     description: "Sáp đậu nành nguyên chất, không hóa chất độc hại",
   },
   {
-    icon: <Heart className="text-brightenUp"/>,
+    icon: <Heart className="text-primary"/>,
     title: "Làm Thủ Công",
     description: "Mỗi sản phẩm được làm tỉ mỉ bởi nghệ nhân",
   },
   {
-    icon: <Award className="text-brightenUp"/>,
+    icon: <Award className="text-primary"/>,
     title: "Chất Lượng Cao",
     description: "Tinh dầu thiên nhiên nhập khẩu từ Pháp",
   },
   {
-    icon: <Clock className="text-brightenUp"/>,
+    icon: <Clock className="text-primary"/>,
     title: "Hương Thơm Bền",
     description: "Lưu hương lên đến 50+ giờ đốt liên tục",
   },
 ]
 
 export default function StorySection() {
+  const stats = [
+    {
+      number: '25+',
+      label: 'Năm Kinh Nghiệm',
+    },
+    {
+      number: '50+',
+      label: 'Hương Thơm',
+    },
+    {
+      number: '10k+',
+      label: 'Khách Hàng',
+    },
+    {
+      number: '100%',
+      label: 'Hài Lòng',
+    }
+  ]
+
   return (
-    <section className="bg-[#023134] py-12 md:py-20 px-4 md:px-12">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-          {/* Content - hiển thị trước trên mobile */}
-          <div className="order-2 lg:order-2">
-            <p className="text-brightenUp text-xs md:text-sm tracking-wider mb-2 text-center lg:text-left">
-              CÂU CHUYỆN CỦA CHÚNG TÔI
-            </p>
-            <h2 className="text-2xl md:text-4xl font-sans text-white leading-tight text-center lg:text-left">
-              Nghệ Thuật <span className="text-brightenUp italic">Thắp Sáng</span>
-              <br />
-              Không Gian
-            </h2>
-            <p className="text-white/60 mt-4 md:mt-6 leading-relaxed text-sm md:text-base text-center lg:text-left">
-              Trang trí và thưởng thức nến là cả một nghệ thuật đòi hỏi công sức và thời gian. Khi tắt điện và thắp nến
-              lên, thời gian như chậm lại làm cho ta thư thái và thấy mình tuất mới.
-            </p>
-            <p className="text-white/60 mt-3 md:mt-4 leading-relaxed text-sm md:text-base text-center lg:text-left">
-              Chúng tôi tin rằng một ngọn nến không chỉ đơn thuần là nguồn sáng, mà còn là cách để bạn tạo nên khoảnh
-              khắc đặc biệt, lan tỏa cảm xúc và hạnh phúc trong không gian sống của mình.
-            </p>
+    <section className="bg-light border-x-line border-[1px] py-5 md:py-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center mb-12 md:mb-16">
+          <p className="text-primary uppercase mb-3">
+            CẬU CHUYỆN CỦA CHÚNG TÔI
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-dark mb-2">
+            Nghệ Thuật <span className="text-primary italic">Thắp Sáng</span>
+          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-dark mb-2">
+            Tâm Hồn
+          </h2>
+          <p className="text-dark max-w-2xl mx-auto text-sm md:text-base mt-4">
+            Trang trí và thưởng thức nến là cả một nghệ thuật đòi hỏi sự tinh tế. Khi ngọn nến được thắp
+            lên, thời gian như chậm lại, mang đến những khoảnh khắc bình yên và thanh thản cho tâm hồn.          </p>
+        </div>
 
-            <div className="grid grid-cols-2 gap-6 md:gap-6 mt-8 md:mt-10">
-              {features.map((feature, index) => (
-               <div key={index}>
-                 <MissCandleValueProp icon={feature.icon} title={feature.title} description={feature.description}/>
-               </div>
-              ))}
+        {/* Services Grid */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {features.map((item, idx) => (
+            <div key={idx}>
+              <MissCandleValueProp icon={item.icon} title={item.title} description={item.description}/>
             </div>
-          </div>
+          ))}
+        </div>
 
-          {/* Image - hiển thị sau trên mobile */}
-          <div className="rounded-2xl relative shadow-[0_0_30px_3px_rgba(245,158,11,0.3)] hidden md:block order-1 lg:order-1">
-            <img
-              src="/section-3.png"
-              alt="Nghệ thuật làm nến"
-              className="rounded-2xl w-full object-cover"
-            />
-            <div className="absolute w-[200px] h-[100px] -bottom-6 -right-6 bg-itemCard border-[1px] border-white/15 backdrop-blur-md rounded-lg px-3 py-3">
-              <div className="text-3xl font-bold text-brightenUp">25+</div>
-              <div className="text-white/70 text-sm">Năm kinh nghiệm làm nến thủ công</div>
+        {/* Stats Section */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-5">
+          {stats.map((stat, idx) => (
+            <div key={idx} className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                {stat.number}
+              </div>
+              <p className="text-dark font-semibold text-sm md:text-base mb-1">
+                {stat.label}
+              </p>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

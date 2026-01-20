@@ -10,18 +10,18 @@ type TMissCandleValuePropProps = {
 const MissCandleValueProp: FunctionComponent<TMissCandleValuePropProps> = ({ icon, title, description }) => {
   return (
     // <></>
-    <div className="flex flex-col items-center md:flex-row md:items-start gap-4 group">
+    <div className="flex flex-col items-center md:flex-col md:items-center gap-4 group">
       {/* Icon Wrapper */}
-      <div className="w-12 h-12 rounded-xl bg-brightenUp/10 flex items-center justify-center flex-shrink-0">
+      <div className="w-12 h-12 rounded-[50px] border-[1px] border-primary text-primary flex items-center justify-center flex-shrink-0">
         {icon}
       </div>
 
       {/* Text Content */}
-      <div className="text-center md:text-left">
-        <h4 className="text-white/80 font-medium text-base">
+      <div className="text-center md:text-center">
+        <h4 className="text-dark font-medium text-base">
           {title}
         </h4>
-        <p className="text-textSecondary text-xs md:text-sm mt-1 leading-snug">
+        <p className="text-dark/80 text-xs md:text-sm mt-1 leading-snug">
           {description}
         </p>
       </div>
