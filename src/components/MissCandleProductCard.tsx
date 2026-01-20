@@ -36,12 +36,12 @@ const MissCandleProductCard: FunctionComponent<TMissCandleProductCard> = ({produ
 
       {/* --- CONTENT --- */}
       <div className="flex flex-col flex-1">
-        <p className="text-[10px] md:text-xs text-textSecondary tracking-wider uppercase font-medium">
+        <p className="text-[10px] md:text-xs text-dark tracking-wider uppercase font-medium">
           {product.category}
         </p>
 
         <Link to={`/san-pham/${product.id}`} className="block">
-          <h3 className="font-medium text-brightenUp/90 mt-1 text-sm md:text-base hover:text-textHover transition-colors line-clamp-1">
+          <h3 className="font-medium text-brightenUp/90 mt-1 text-sm md:text-base hover:text-primary transition-colors line-clamp-1">
             {product.name}
           </h3>
         </Link>
@@ -54,22 +54,22 @@ const MissCandleProductCard: FunctionComponent<TMissCandleProductCard> = ({produ
               className={`w-3 h-3 md:w-3.5 md:h-3.5 ${
                 i < product.rating
                   ? "fill-textHover text-textHover"
-                  : "fill-gray-200/20 text-gray-200/20"
+                  : "fill-gray-200/20 text-dark"
               }`}
             />
           ))}
-          <span className="text-[10px] md:text-xs text-textSecondary ml-1">
+          <span className="text-[10px] md:text-xs text-dark">
             ({product.rating})
           </span>
         </div>
 
         {/* Price (Đẩy xuống đáy nếu card có chiều cao không đều) */}
         <div className="flex items-end gap-2 mt-auto pt-2 md:pt-3">
-          <span className="font-bold text-textSecondary text-sm md:text-base">
+          <span className="font-bold text-dark text-sm md:text-base">
             {product.price}
           </span>
           {product.originalPrice && (
-            <span className="text-xs text-textSecondary line-through mb-0.5 opacity-70">
+            <span className="text-xs text-dark line-through mb-0.5 opacity-70">
               {product.originalPrice}
             </span>
           )}

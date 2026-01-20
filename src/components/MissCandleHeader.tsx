@@ -1,5 +1,5 @@
 import {FunctionComponent, useState} from "react"
-import { Search, ShoppingBag, Menu, X } from "lucide-react"
+import {ShoppingBag, Menu, X} from "lucide-react"
 import { Link } from "react-router-dom"
 
 const MENU_ITEMS : { label: string, path: string }[] = [
@@ -14,12 +14,12 @@ const MissCandleHeader: FunctionComponent<unknown> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-bgHeaderFooter relative top-0 left-0 right-0 z-50 py-4 px-4 md:px-12">
+    <header className="bg-light relative top-0 left-0 right-0 z-50 py-4 px-4 md:px-12">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img
-            src="/logo.png" // Đường dẫn ảnh trong thư mục public
+            src="/logo_2.png" // Đường dẫn ảnh trong thư mục public
             alt="Miss Candle Logo"
             className="h-12 w-auto object-contain"
           />
@@ -28,7 +28,7 @@ const MissCandleHeader: FunctionComponent<unknown> = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           {MENU_ITEMS.map(item => (
-            <Link to={`${item.path}`} className="text-textHeader text-sm hover:text-brightenUp transition">
+            <Link to={`${item.path}`} className="text-dark text-sm hover:text-primary transition">
               {item.label}
             </Link>
           ))}
@@ -36,12 +36,9 @@ const MissCandleHeader: FunctionComponent<unknown> = () => {
 
         {/* Icons */}
         <div className="flex items-center gap-3">
-          <button className="text-textHeader hover:text-white transition hidden md:block">
-            <Search className="w-5 h-5" />
-          </button>
-          <button className="text-textHeader hover:text-white transition relative">
+          <button className="text-dark hover:text-primary transition relative">
             <ShoppingBag className="w-5 h-5" />
-            <span className="absolute -top-1 -right-1 w-4 h-4 bg-brightenUp rounded-full text-[10px] flex items-center justify-center text-white">
+            <span className="absolute -top-1 -right-1 w-4 h-4 bg-primary rounded-full text-[10px] flex items-center justify-center text-dark">
               0
             </span>
           </button>

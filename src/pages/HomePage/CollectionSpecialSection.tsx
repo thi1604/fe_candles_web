@@ -11,7 +11,7 @@ const products: IProductCard[] = [
     originalPrice: "470.000đ",
     rating: 5,
     reviews: 24,
-    image: "/collection_special_1.png",
+    image: "/collection_special_1_1.png",
     badge: "HOT",
   },
   {
@@ -21,7 +21,7 @@ const products: IProductCard[] = [
     price: "380.000đ",
     rating: 5,
     reviews: 18,
-    image: "/collection_special_2.png",
+    image: "/collection_special_2_2.png",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const products: IProductCard[] = [
     price: "520.000đ",
     rating: 4,
     reviews: 32,
-    image: "/collection_special_3.png",
+    image: "/collection_special_3_3.png",
     badge: "MỚI",
   },
   {
@@ -41,30 +41,29 @@ const products: IProductCard[] = [
     originalPrice: "450.000đ",
     rating: 5,
     reviews: 15,
-    image: "/collection_special_4.png",
+    image: "/collection_special_4_4.png",
   },
 ];
 
 export default function CollectionSpecialSection () {
 
   return (
-    <section className="bg-bgSectionSpecialItem py-12 md:py-20 px-4 md:px-12">
+    <section className="bg-light py-12 md:py-20 px-4 md:px-12">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-8 md:mb-12">
-          <p className="text-textSecondary text-xs md:text-sm tracking-widest font-medium mb-2 uppercase">
+          <p className="text-primary text-xs md:text-sm tracking-widest font-medium mb-2 uppercase">
             Sản Phẩm Nổi Bật
           </p>
-          <h2 className="text-2xl md:text-4xl font-serif text-textSecondary font-bold">
-            Bộ Sưu Tập <span className="text-brightenUp/70 italic">Đặc Biệt</span>
+          <h2 className="text-2xl md:text-4xl font-serif text-dark font-bold">
+            Bộ Sưu Tập <span className="text-primary italic">Đặc Biệt</span>
           </h2>
-          <p className="text-textSecondary mt-3 md:mt-4 max-w-xl mx-auto text-sm md:text-base opacity-80">
+          <p className="text-dark mt-3 md:mt-4 max-w-xl mx-auto text-sm md:text-base opacity-80">
             Những sản phẩm được yêu thích nhất, được làm thủ công từ nguyên liệu tự nhiên
             với hương thơm tinh tế, bền lâu.
           </p>
         </div>
 
-        {/* Grid Products - Code giờ đây siêu ngắn gọn */}
         <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {products.map((product) => (
             <MissCandleProductCard key={product.id} product={product} />
@@ -75,7 +74,7 @@ export default function CollectionSpecialSection () {
         <div className="text-center mt-10 md:mt-12">
           <Link
             to="/san-pham"
-            className="inline-flex items-center justify-center px-8 py-3 text-textSecondary font-medium hover:text-brightenUp transition duration-300 text-sm md:text-base group"
+            className="inline-flex items-center justify-center px-8 py-3 text-dark font-medium hover:text-primary transition duration-300 text-sm md:text-base group"
           >
             Xem tất cả bộ sưu tập
             <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
