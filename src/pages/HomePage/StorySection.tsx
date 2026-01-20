@@ -3,22 +3,22 @@ import {MissCandleValueProp} from "../../components";
 
 const features = [
   {
-    icon: Leaf,
+    icon: <Leaf className="text-brightenUp"/>,
     title: "100% Tự Nhiên",
     description: "Sáp đậu nành nguyên chất, không hóa chất độc hại",
   },
   {
-    icon: Heart,
+    icon: <Heart className="text-brightenUp"/>,
     title: "Làm Thủ Công",
     description: "Mỗi sản phẩm được làm tỉ mỉ bởi nghệ nhân",
   },
   {
-    icon: Award,
+    icon: <Award className="text-brightenUp"/>,
     title: "Chất Lượng Cao",
     description: "Tinh dầu thiên nhiên nhập khẩu từ Pháp",
   },
   {
-    icon: Clock,
+    icon: <Clock className="text-brightenUp"/>,
     title: "Hương Thơm Bền",
     description: "Lưu hương lên đến 50+ giờ đốt liên tục",
   },
@@ -31,11 +31,11 @@ export default function StorySection() {
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Content - hiển thị trước trên mobile */}
           <div className="order-2 lg:order-2">
-            <p className="text-amber-400 text-xs md:text-sm tracking-wider mb-2 text-center lg:text-left">
+            <p className="text-brightenUp text-xs md:text-sm tracking-wider mb-2 text-center lg:text-left">
               CÂU CHUYỆN CỦA CHÚNG TÔI
             </p>
             <h2 className="text-2xl md:text-4xl font-sans text-white leading-tight text-center lg:text-left">
-              Nghệ Thuật <span className="text-amber-400 italic">Thắp Sáng</span>
+              Nghệ Thuật <span className="text-brightenUp italic">Thắp Sáng</span>
               <br />
               Không Gian
             </h2>
@@ -58,14 +58,14 @@ export default function StorySection() {
           </div>
 
           {/* Image - hiển thị sau trên mobile */}
-          <div className="relative rounded-2xl shadow-[0_0_30px_3px_rgba(245,158,11,0.3)] hidden md:block order-1 lg:order-1">
+          <div className="rounded-2xl relative shadow-[0_0_30px_3px_rgba(245,158,11,0.3)] hidden md:block order-1 lg:order-1">
             <img
               src="/section-3.png"
               alt="Nghệ thuật làm nến"
               className="rounded-2xl w-full object-cover"
             />
             <div className="absolute w-[200px] h-[100px] -bottom-6 -right-6 bg-itemCard border-[1px] border-white/15 backdrop-blur-md rounded-lg px-3 py-3">
-              <div className="text-3xl font-bold text-amber-400">25+</div>
+              <div className="text-3xl font-bold text-brightenUp">25+</div>
               <div className="text-white/70 text-sm">Năm kinh nghiệm làm nến thủ công</div>
             </div>
           </div>
